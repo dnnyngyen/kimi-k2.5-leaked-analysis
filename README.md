@@ -5,6 +5,49 @@ Agents have begun to evolve beyond "Tool-Use Architectures" (providing models wi
 
 ---
 
+### Quickstart:
+
+1. **[KIMI_AGENTS_EXPLAINED.md](KIMI_AGENTS_EXPLAINED.md)** - Understand the difference between Kimi Chat (tool-use) and OK Computer (agentic environment).
+2. **[KIMI_FILESYSTEM.md](KIMI_FILESYSTEM.md)** - Explore the persistent filesystem, skill storage, and runtime structure.
+
+
+---
+
+## Repository Structure
+
+```
+
+├── kimi-chat/               # Base chat configuration
+├── kimi-docs/               # Docs agent
+├── kimi-ok-computer/        # General computer control agent
+├── kimi-sheets/             # Sheets agent
+├── kimi-slides/             # Slides agent
+├── kimi-websites/           # Website builder agent
+│
+├── root/                    # Kimi's root filesystem analysis
+│   ├── app/                 # Application scripts
+│   ├── browser-guard.md     # Browser automation analysis
+│   ├── jupyter-kernel.md    # Kernel analysis
+│   └── ...
+│
+├── skills/                  # Skill system documentation
+│   ├── docx/                # Word generation skill
+│   ├── pdf/                 # PDF generation skill
+│   ├── webapp/              # WebApp skill
+│   ├── xlsx/                # Excel skill
+│   └── skill-system.md      # Skills framework overview
+│
+├── system/                  # System-wide architecture
+│   ├── architecture.md      # Shell-Operator paradigm analysis
+│   ├── infra.md             # Infrastructure analysis
+│   └── security.md          # Security notes
+│
+├── KIMI_AGENTS_EXPLAINED.md # Deep dive into agent types
+├── KIMI_FILESYSTEM.md       # Filesystem structure analysis
+└── METHODOLOGY.md           # Research methodology
+
+```
+
 ## High-Level Architecture:
 
 ```mermaid
@@ -68,50 +111,6 @@ flowchart LR
     style INFRA fill:#e2e8f0,stroke:#94a3b8,stroke-width:2px,color:#1e293b
 ```
 
----
-
-### Quickstart:
-
-1. **[KIMI_AGENTS_EXPLAINED.md](KIMI_AGENTS_EXPLAINED.md)** - Understand the difference between Kimi Chat (tool-use) and OK Computer (agentic environment).
-2. **[KIMI_FILESYSTEM.md](KIMI_FILESYSTEM.md)** - Explore the persistent filesystem, skill storage, and runtime structure.
-
-
----
-
-## Repository Structure
-
-```
-
-├── kimi-chat/               # Base chat configuration
-├── kimi-docs/               # Docs agent
-├── kimi-ok-computer/        # General computer control agent
-├── kimi-sheets/             # Sheets agent
-├── kimi-slides/             # Slides agent
-├── kimi-websites/           # Website builder agent
-│
-├── root/                    # Kimi's root filesystem analysis
-│   ├── app/                 # Application scripts
-│   ├── browser-guard.md     # Browser automation analysis
-│   ├── jupyter-kernel.md    # Kernel analysis
-│   └── ...
-│
-├── skills/                  # Skill system documentation
-│   ├── docx/                # Word generation skill
-│   ├── pdf/                 # PDF generation skill
-│   ├── webapp/              # WebApp skill
-│   ├── xlsx/                # Excel skill
-│   └── skill-system.md      # Skills framework overview
-│
-├── system/                  # System-wide architecture
-│   ├── architecture.md      # Shell-Operator paradigm analysis
-│   ├── infra.md             # Infrastructure analysis
-│   └── security.md          # Security notes
-│
-├── KIMI_AGENTS_EXPLAINED.md # Deep dive into agent types
-├── KIMI_FILESYSTEM.md       # Filesystem structure analysis
-└── METHODOLOGY.md           # Research methodology
-
-```
 ---
 
 **Methodology:** Cleanroom extraction through the agent's own tools. No authentication was bypassed. No binaries were decompiled. See [METHODOLOGY.md](METHODOLOGY.md) for details.
