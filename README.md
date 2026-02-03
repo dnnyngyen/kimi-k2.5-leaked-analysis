@@ -114,15 +114,7 @@ flowchart LR
 
 ## Methodology
 
-Cleanroom extraction through the agent's own tools. The agent environment provides shell and Python access by design:
-
-```python
-import os
-os.listdir('/app/')
-open('/app/kernel_server.py').read()
-```
-
-No authentication was bypassed. No binaries were decompiled. See [methodology.md](methodology.md) for details.
+Cleanroom extraction through the agent's own tools. No authentication was bypassed. No binaries were decompiled. See [methodology.md](methodology.md) for details.
 
 ---
 
