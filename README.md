@@ -110,15 +110,6 @@ flowchart LR
     └── supporting_directories.md
 
 ```
-
----
-
-## Start Here
-
-- **[architecture.md](architecture.md)**: The main technical article explaining how Kimi works
-- **[deep-dives/skills.md](deep-dives/skills.md)**: How skill files specialize the agent
-- **[stealth-mystery.md](stealth-mystery.md)**: Analysis of the unexplained Bitcoin code
-
 ---
 
 ## Methodology
