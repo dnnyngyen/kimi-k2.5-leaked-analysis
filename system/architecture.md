@@ -40,7 +40,7 @@
 ```
 ---
 
-## The Missing Tools
+## The "Missing" Tools
 
 Start with something simple: look at what tools Kimi has access to.
 
@@ -93,14 +93,6 @@ When you ask Kimi for a spreadsheet, something interesting happens before it sta
 The skill file teaches things a generic agent wouldn't know. For instance, `FILTER()`, `XLOOKUP()`, and `LAMBDA()` work in Excel 365 but crash in Excel 2019. The skill file tells the agent to use `INDEX/MATCH` instead. It specifies that gridlines should always be hidden. It explains the exact validation commands to run before delivering a file. After reading this file, the same shell tool that could do anything becomes focused. It knows what to do. The generic tool becomes a specialist.
 
 ---
-
-## One Tool, Many Experts
-
-The implications of this design are worth thinking through. In a traditional MCP (Model Context Protocol) setup, adding Excel support means writing backend code. You implement the logic, define a tool schema, deploy the service. The model calls your function and receives results. It never sees how anything works.
-
-In Kimi's design, adding Excel support means writing documentation. You describe how Excel generation should work (including what commands to run, what pitfalls to avoid, and what validation to perform) and place that file in the skills directory. The model reads the documentation and figures out the rest.
-
-This is the same pattern across all of Kimi's capabilities. For documents, the skill file explains that Word generation requires C# with the OpenXML SDK. The agent writes the C# code, compiles it with `dotnet run`, and runs a custom validator. For PDFs, there are three different routes depending on context: business documents use HTML with Playwright, academic papers use LaTeX with the Tectonic compiler, and existing PDFs get manipulated with pikepdf. For web apps, it's React with TypeScript, Tailwind, and shadcn/ui, with the skill file documenting 50+ pre-installed UI components and explaining the build process.
 
 ```mermaid
 graph TB
@@ -241,7 +233,3 @@ Kimi demonstrates that you can separate two concerns that usually get conflated:
 New capabilities become a documentation problem. Write a thorough enough manual, put it in the right directory, and the agent becomes an expert in that domain. Whether this scales remains to be seen. 900-line instruction manuals are complex documents. Models might struggle as skills get more intricate. Verification becomes harder when the model generates the logic rather than calling verified backend code.
 
 But it works today for documents, spreadsheets, PDFs, and web applications. That's not nothing.
-
----
-
-*Extracted through cleanroom reverse engineering. No authentication was bypassed. No binaries were decompiled. The agent provides filesystem access by design, and I used it.*

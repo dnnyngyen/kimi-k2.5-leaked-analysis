@@ -1,12 +1,11 @@
-# Kimi K2.5: A Case Study on Skill-Based Architecture
-
+# Kimi K2.5 System Analysis (Prompts + Tools + Skills)
 
 **Abstract:**
 Agents have begun to evolve beyond "Tool-Use Architectures" (providing models with discrete APIs) into "Environment Architectures" (providing models with general-purpose computing contexts). This repository explores how Moonshot AI's Kimi K2.5 agent system represents a paradigm shift from the former to the latter.
 
 ---
 
-## High-Level Component Diagram
+## High-Level Architecture:
 
 ```mermaid
 
@@ -71,49 +70,51 @@ flowchart LR
 
 ---
 
+### Quickstart:
+
+1. **[KIMI_AGENTS_EXPLAINED.md](KIMI_AGENTS_EXPLAINED.md)** - Understand the difference between Kimi Chat (tool-use) and OK Computer (agentic environment).
+2. **[KIMI_FILESYSTEM.md](KIMI_FILESYSTEM.md)** - Explore the persistent filesystem, skill storage, and runtime structure.
+
+
+---
+
 ## Repository Structure
 
 ```
 
-├── .kimi/
-│   ├── app/
-│   │   ├── scripts/             # Python source files (browser_guard.py, etc.)
-│   │   ├── browser-guard.md     # Browser automation analysis
-│   │   ├── jupyter-kernel.md    # Kernel analysis
-│   │   └── ...
-│   └── root-overview.md
+├── kimi-chat/               # Base chat configuration
+├── kimi-docs/               # Docs agent
+├── kimi-ok-computer/        # General computer control agent
+├── kimi-sheets/             # Sheets agent
+├── kimi-slides/             # Slides agent
+├── kimi-websites/           # Website builder agent
 │
-├── prompts-tools/
-│   ├── kimi-agents/             # Agent definitions
-│   │   ├── kimi-docs/
-│   │   ├── kimi-ok-computer/
-│   │   ├── kimi-sheets/
-│   │   ├── kimi-slides/
-│   │   └── kimi-websites/
-│   ├── kimi-chat/               # Base chat configuration
-│   ├── prompt-analysis.md
-│   └── the-age-of-skills.md
+├── root/                    # Kimi's root filesystem analysis
+│   ├── app/                 # Application scripts
+│   ├── browser-guard.md     # Browser automation analysis
+│   ├── jupyter-kernel.md    # Kernel analysis
+│   └── ...
 │
-├── skills/                      # Skill system documentation
-│   ├── docx/                    # Word generation skill
-│   ├── pdf/                     # PDF generation skill
-│   ├── webapp/                  # WebApp skill
-│   ├── xlsx/                    # Excel skill
-│   └── skill-system.md          # Skills framework overview
+├── skills/                  # Skill system documentation
+│   ├── docx/                # Word generation skill
+│   ├── pdf/                 # PDF generation skill
+│   ├── webapp/              # WebApp skill
+│   ├── xlsx/                # Excel skill
+│   └── skill-system.md      # Skills framework overview
 │
-└── system_overview/             # System-wide documentation
-    ├── architecture.md          # Shell-Operator paradigm analysis
-    ├── filesystems.md
-    ├── infrastructure.md        # Four-layer architecture
-    ├── maps.md
-    ├── methodology.md           # Extraction methodology
-    ├── security.md              # Security notes
-    └── supporting_directories.md
+├── system/                  # System-wide architecture
+│   ├── architecture.md      # Shell-Operator paradigm analysis
+│   ├── infra.md             # Infrastructure analysis
+│   └── security.md          # Security notes
+│
+├── KIMI_AGENTS_EXPLAINED.md # Deep dive into agent types
+├── KIMI_FILESYSTEM.md       # Filesystem structure analysis
+└── METHODOLOGY.md           # Research methodology
 
 ```
 ---
 
-**Methodology:** Cleanroom extraction through the agent's own tools. No authentication was bypassed. No binaries were decompiled. See [methodology.md](methodology.md) for details.
+**Methodology:** Cleanroom extraction through the agent's own tools. No authentication was bypassed. No binaries were decompiled. See [METHODOLOGY.md](METHODOLOGY.md) for details.
 
 ---
 

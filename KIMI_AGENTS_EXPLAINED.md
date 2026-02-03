@@ -1,6 +1,6 @@
-# Analysis of KIMI System Prompts
+# Analysis of KIMI System Agents and Prompts
 
-## KIMI operates in 4 distinct modes:
+## KIMI operates in 8 distinct modes:
 
 # 1. Base KIMI chat (kimi.com/chat):
 **KIMI K2.5 Instant** – Fast, non-thinking mode
@@ -25,18 +25,18 @@ Standard single-agent tool use with OK Computer environment and KIMI agent promp
 ### 2d. KIMI Sheets (kimi.com/sheets):
 Standard single-agent tool use with OK Computer environment and KIMI agent prompt with Instructions to read xlsx SKILL.md first
 
-### 3. KIMI Slides (kimi.com/slides):
+## 3. KIMI Slides (kimi.com/slides):
 Standard single-agent tool use with OK Computer environment and a specialized prompt different from the other agents. (More on that in a second.)
 
-### 4. KIMI k1-Researcher (kimi.com/deep-research):
+## 4. KIMI k1-Researcher (kimi.com/deep-research):
 Control flow / Human-in-the-Loop agent for deep research. Runs a specialized model under the hood. (Adding to this repo soon)
 
-### 5. KIMI K2.5 Agent Swarm (kimi.com/agent-swarm):
+## 5. KIMI K2.5 Agent Swarm (kimi.com/agent-swarm):
 PARL-trained model capable of orchestrating ~100 agents across ~1.5k steps. (Adding to this repo soon)
 
 ---
 
-## Base Chat vs. OK Computer
+## Base Chat vs. Kimi Agent (OK Computer)
 
 The same Kimi model powers two different experiences. Base Chat at kimi.com/chat is conversational: 10 tool calls per turn, no skill loading, no persistent filesystem. It's a question-answering system. OK Computer at kimi.com/agent is agentic: 200-300 tool calls per session, runtime skill injection, persistent workspace. It produces deliverables.
 
