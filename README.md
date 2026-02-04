@@ -2,7 +2,7 @@
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
-> An analysis of Moonshot AI's Kimi K2.5 agent architecture, extracted through the agent's own tools.
+> An analysis of Moonshot AI's Kimi K2.5 agent architecture.
 >
 > **AI Disclosure:** This analysis was conducted using [Claude Code](https://claude.ai/code).
 
