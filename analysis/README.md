@@ -52,19 +52,15 @@ Analysis of the two specialization patterns: Skill Scaffolding versus Persona Re
 
 ## Key Insights Summary
 
-**1. Infrastructure is Intelligence**
-
-The same model with persistent filesystem and 300 tool calls is "smarter" than the same model in a chat window with 10 calls.
-
-**2. Context is Specialization**
+**1. Context is Specialization**
 
 You do not need fine-tuning to create a "Sheets Agent". You just need to force-feed it the right documentation.
 
-**3. Persona is for Taste**
+**2. Persona is for Taste**
 
 Technical tasks get skill documentation. Creative tasks get expert personas.
 
-**4. Skills vs. Personas**
+**3. Skills vs. Personas**
 
 Skill scaffolding works for objective correctness. Persona replacement works for subjective excellence.
 
