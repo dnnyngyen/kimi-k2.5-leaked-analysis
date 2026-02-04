@@ -31,12 +31,12 @@ Security documentation:
 - Port exposure and CORS configuration
 - Threat model analysis
 
-### [skills/](skills/) - Skill Deep-Dives
+### [skills-analysis/](skills-analysis/) - Skill Deep-Dives
 Detailed analysis of each Kimi skill:
-- [docx/](skills/docx/) - Word document generation
-- [pdf/](skills/pdf/) - PDF processing and generation
-- [webapp/](skills/webapp/) - React web application builder
-- [xlsx/](skills/xlsx/) - Excel spreadsheet generation
+- [docx/](skills-analysis/docx/) - Word document generation
+- [pdf/](skills-analysis/pdf/) - PDF processing and generation
+- [webapp/](skills-analysis/webapp/) - React web application builder
+- [xlsx/](skills-analysis/xlsx/) - Excel spreadsheet generation
 
 ## Reading Guide
 
@@ -44,10 +44,10 @@ Detailed analysis of each Kimi skill:
 - System runtime → Start with [runtime/jupyter-kernel.md](runtime/jupyter-kernel.md)
 - How skills work → Read [system-architecture/skill-system.md](system-architecture/skill-system.md)
 - Infrastructure setup → See [infrastructure/container-infrastructure.md](infrastructure/container-infrastructure.md)
-- A specific skill → Browse [skills/](skills/)
+- A specific skill → Browse [skills-analysis/](skills-analysis/)
 
 **Want everything about one skill?**
-- Go to the relevant subdirectory under [skills/](skills/)
+- Go to the relevant subdirectory under [skills-analysis/](skills-analysis/)
 - Each skill folder has analysis, workflow, and implementation details
 
 ## File Statistics

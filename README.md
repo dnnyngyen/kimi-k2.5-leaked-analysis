@@ -93,7 +93,7 @@ kimi-k2.5-system-analysis/
 │   ├── security/
 │   │   ├── README.md
 │   │   └── security-model.md
-│   └── skills/
+│   └── skills-analysis/
 │       ├── README.md
 │       ├── docx/
 │       │   ├── docx-skill-analysis.md
