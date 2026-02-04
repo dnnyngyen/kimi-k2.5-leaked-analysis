@@ -14,7 +14,7 @@ Kimi Sheets forces reading of the xlsx skill. Kimi Docs requires reading docx or
 
 **Persona replacement** is what Slides uses. The pattern is: replace OK Computer entirely with a different character. "You are a presentation designer who has worked at McKinsey for 20 years, specializing in creating high-information-density, content-rich, and in-depth presentation slides."
 
-The McKinsey persona embodies a style, a voice, and a set of values. High-density layouts. Clean structure. Consultant-grade aesthetics. These are difficult to encode in procedural documentation.
+The McKinsey persona carries a style, a voice, and a set of values. High-density layouts. Clean structure. Consultant-grade aesthetics. These are difficult to encode in procedural documentation.
 
 ---
 
@@ -74,13 +74,13 @@ The second approach distributes expertise through character, not documentation.
 
 Docs, Sheets, and Websites use skill injection. Their base identity stays OK Computer. Their knowledge source is SKILL.md files. Their validation is binary: pass or fail. Their first step is reading the skill file. Their correctness criteria are procedural rules. They use automatic generation without user approval.
 
-Slides uses persona replacement. Its base identity becomes the McKinsey consultant. Its knowledge source is character perspective. Its validation is qualitative: compelling or not compelling. Its first step is thinking like a consultant. Its correctness criteria are aesthetic judgment. It uses interactive approval with outline confirmation.
+Slides uses persona replacement. Its base identity is the McKinsey consultant. Its knowledge source is character perspective. Its validation is qualitative: compelling or not compelling. Its first step is thinking like a consultant. Its correctness criteria are aesthetic judgment. It uses interactive approval with outline confirmation.
 
 ---
 
 ## Architectural implications
 
-The Slides agent demonstrates persona replacement as a specialization strategy. This is not a limitation. Slides doesn't have a SKILL.md because the task doesn't admit procedural specification.
+The Slides agent shows persona replacement as a specialization strategy. This is not a limitation. Slides doesn't have a SKILL.md because the task doesn't admit procedural specification.
 
 It is deliberate architecture: using a McKinsey persona instead of technical documentation.
 

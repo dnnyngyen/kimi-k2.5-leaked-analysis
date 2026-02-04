@@ -33,4 +33,4 @@ search_image_by_text(queries=["capybara"], total_count=5)
 ```
 
 ## Note
-Functionality identical to OK Computer version. Naming difference only reflects environment namespace.
+Functionality identical to OK Computer version. Naming difference only shows environment namespace.

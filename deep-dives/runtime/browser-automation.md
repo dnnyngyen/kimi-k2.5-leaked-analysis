@@ -1,6 +1,6 @@
 # The Browser Guard
 
-At 1,178 lines, browser_guard.py is the largest Python module in the core infrastructure. It handles browser automation through a dual-implementation strategy: Playwright for high-level automation and Chrome DevTools Protocol for low-level control. The complexity reflects the challenges of modern browser automation—bot detection, stealth injection, persistent profiles, and failure recovery.
+At 1,178 lines, browser_guard.py is the largest Python module in the core infrastructure. It handles browser automation through a dual-implementation strategy: Playwright for high-level automation and Chrome DevTools Protocol for low-level control. The complexity exists because of the challenges of modern browser automation—bot detection, stealth injection, persistent profiles, and failure recovery.
 
 ---
 
@@ -290,7 +290,7 @@ async def wait_for_display(timeout: float = 60.0) -> bool:
     raise TimeoutError("X11 display not available")
 ```
 
-The module also coordinates with pyautogui for GUI-level automation—screenshots, mouse clicks, keyboard input. This works through the same X11 display, allowing the agent to interact with browser content that can't be automated through Playwright or CDP.
+The module also coordinates with pyautogui for GUI-level automation—screenshots, mouse clicks, keyboard input. This works through the same X11 display, so the agent can interact with browser content that can't be automated through Playwright or CDP.
 
 ---
 

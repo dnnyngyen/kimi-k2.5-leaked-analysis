@@ -446,7 +446,7 @@ var row = new TableRow(
 
 ### Example.cs
 
-**Read the entire file to understand the overall structure**, not just individual functions. The file demonstrates how sections connect (cover → TOC → body → back cover).
+**Read the entire file to understand the overall structure**, not just individual functions. The file shows how sections connect (cover → TOC → body → back cover).
 
 The "Project Proposal", "[Company Name]", etc. in Example are **example content only**, and the color scheme is **for reference only**.
 

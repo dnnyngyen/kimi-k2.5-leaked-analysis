@@ -335,7 +335,7 @@ Each `npm run build` is idempotent. It clears the dist/ directory. It rebuilds f
 
 ### 5. External Build Tool Dependency
 
-The skill demonstrates external build tool dependency. The skill does not create content directly. The skill sets up a development environment. Standard industry tools like npm, React, and Vite do the work. The agent generates source code that feeds into standard build pipeline. This is the most conventional skill architecture. It uses the same tools human developers use, orchestrated by the agent via shell commands.
+The skill uses external build tool dependency. The skill does not create content directly. The skill sets up a development environment. Standard industry tools like npm, React, and Vite do the work. The agent generates source code that feeds into standard build pipeline. This is the most conventional skill architecture. It uses the same tools human developers use, orchestrated by the agent via shell commands.
 
 ---
 

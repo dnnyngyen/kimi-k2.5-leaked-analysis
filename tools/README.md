@@ -4,6 +4,68 @@ Tool schemas and documentation for the Kimi K2.5 agent system.
 
 ---
 
+## Table of Contents
+
+- [File Structure](#file-structure)
+- [Overview](#overview)
+- [Base Chat Tools (9)](#base-chat-tools-9)
+- [OK Computer Tools (28)](#ok-computer-tools-28)
+- [The Universal Shell Pattern](#the-universal-shell-pattern)
+- [Tool Prefix Note](#tool-prefix-note)
+- [Related Documentation](#related-documentation)
+
+---
+
+## File Structure
+
+```
+tools/
+├── README.md              # This file
+├── base-chat.json         # Base Chat tool schemas
+├── ok-computer.json       # OK Computer tool schemas
+├── base-chat/             # 9 Base Chat tool docs
+│   ├── web_search.md
+│   ├── web_open_url.md
+│   ├── search_image_by_text.md
+│   ├── search_image_by_image.md
+│   ├── ipython.md
+│   ├── shell.md
+│   ├── get_data_source.md
+│   ├── get_data_source_desc.md
+│   └── memory_space_edits.md
+└── ok-computer/           # 28 OK Computer tool docs
+    ├── browser_visit.md
+    ├── browser_click.md
+    ├── browser_input.md
+    ├── browser_find.md
+    ├── browser_scroll_up.md
+    ├── browser_scroll_down.md
+    ├── browser_screenshot.md
+    ├── browser_state.md
+    ├── read_file.md
+    ├── write_file.md
+    ├── edit_file.md
+    ├── generate_image.md
+    ├── crop_and_replicate_assets_in_image.md
+    ├── find_asset_bbox.md
+    ├── generate_speech.md
+    ├── generate_sound_effects.md
+    ├── get_available_voices.md
+    ├── web_search.md
+    ├── search_image_by_text.md
+    ├── search_image_by_image.md
+    ├── get_data_source.md
+    ├── ipython.md
+    ├── shell.md
+    ├── todo_read.md
+    ├── todo_write.md
+    ├── screenshot_web_full_page.md
+    ├── deploy_website.md
+    └── slides_generator.md
+```
+
+---
+
 ## Overview
 
 Kimi provides different tool sets depending on the agent mode. Base Chat gets 9 tools. OK Computer gets 28. The difference is not just quantity. It is capability.
@@ -74,31 +136,20 @@ The same web search and image search tools from Base Chat appear here. `get_data
 
 All skills use the same generic tools. The `shell` tool that validates Excel files is identical to the `shell` tool that compiles LaTeX documents. What changes is the knowledge loaded into the context window.
 
-When processing a spreadsheet request, the agent reads the XLSX skill documentation. This 925-line manual teaches compatibility rules, validation procedures, and styling conventions. The generic shell tool becomes an Excel specialist through context, not code.
+When processing a spreadsheet request, the agent reads the XLSX skill documentation. This 925-line manual teaches compatibility rules, validation procedures, and styling conventions. The generic shell tool turns into an Excel specialist through context, not code.
 
-See [../skills/README.md](../skills/README.md) for how skills transform generic tools into domain experts.
-
----
-
-## Directory Structure
-
-```
-tools/
-├── base-chat/          # 9 Base Chat tool docs
-│   ├── web_search.md
-│   ├── ipython.md
-│   └── ...
-├── ok-computer/        # 28 OK Computer tool docs
-│   ├── browser_visit.md
-│   ├── browser_click.md
-│   ├── shell.md
-│   └── ...
-├── base-chat.json      # Base Chat tools schema
-└── ok-computer.json    # OK Computer tools schema
-```
+See [`../skills/README.md`](../skills/README.md) for how skills transform generic tools into domain experts.
 
 ---
 
 ## Tool Prefix Note
 
 The "mshtools-" prefix in the original files stands for "Moonshot Tools". In this repository, we have removed the prefix for cleaner filenames while preserving the original tool names in the documentation.
+
+---
+
+## Related Documentation
+
+- [`../skills/README.md`](../skills/README.md) - How skills transform generic tools
+- [`../prompts/README.md`](../prompts/README.md) - Agent types that use these tools
+- [`../analysis/how-kimi-works.md`](../analysis/how-kimi-works.md) - Tool-use vs environment architecture

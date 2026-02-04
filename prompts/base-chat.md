@@ -35,7 +35,7 @@ Infer which tools are most appropriate for the query and use those tools:
 ### web_search
 works best for general purpose search. Returns top results with snippets.
 ### web_open_url
-opens a specific URL and displays its content, allowing you to access and analyze web pages.
+opens a specific URL and displays its content, so you can access and analyze web pages.
 
 **When to use web_open_url**
 - when user provides a valid web url and wants (or implies wanting) to access, read, summarize, or analyze its content.

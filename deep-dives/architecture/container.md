@@ -65,7 +65,7 @@ The compute engine runs an IPython kernel that handles actual code execution. Ze
 
 The implementation is notably defensive, with multiple fallback strategies for finding the kernel process ID across different jupyter-client versions. First it checks the provisioner API from jupyter-client 7.0+, then the legacy kernel property, then process table scanning with psutil, and finally connection file matching. This kind of compatibility dance suggests the code runs in varied deployment environments.
 
-The web tools layer provides browser automation through Playwright driving Chrome. The browser runs in stealth mode with anti-detection flags like `--disable-blink-features=AutomationControlled`, allowing the agent to interact with web pages that might block obvious automation. External network access is blocked at the container level, so web interactions go through this controlled channel rather than arbitrary HTTP requests.
+The web tools layer provides browser automation through Playwright driving Chrome. The browser runs in stealth mode with anti-detection flags, so the agent can interact with web pages that might block obvious automation. External network access is blocked at the container level, so web interactions go through this controlled channel rather than arbitrary HTTP requests.
 
 The module provides two browser implementations: Playwright for high-level automation and Chrome DevTools Protocol for lower-level control. The dual approach provides fallback options; for example, when Playwright's context becomes unresponsive, CDP provides direct process control. The CDP implementation also runs a monitoring loop that auto-restarts the browser if it crashes and creates new tabs if they all close.
 
@@ -91,7 +91,7 @@ These binaries represent capabilities that would be difficult to implement in pu
 
 The security model assumes container isolation. Within that boundary, services are permissive.
 
-Port 8888 runs the kernel server with CORS `allow_origins=["*"]`; consequently, anyone who can reach the container network can restart the kernel. Port 9223 exposes Chrome's DevTools Protocol, allowing page manipulation and JavaScript execution. Neither service has authentication.
+Port 8888 runs the kernel server with CORS `allow_origins=["*"]`; consequently, anyone who can reach the container network can restart the kernel. Port 9223 exposes Chrome's DevTools Protocol for page manipulation and JavaScript execution. Neither service has authentication.
 
 This would be dangerous for a public-facing service. In Kimi's case, these ports are internal to a container that users can't directly reach. The assumption is that only trusted orchestration components connect to them.
 

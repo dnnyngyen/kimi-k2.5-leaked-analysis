@@ -8,7 +8,7 @@ Comprehensive analysis of the Word document generation skill.
 
 The DOCX skill handles Word document generation through an unusual dual-stack architecture. Unlike typical Python-based document generation, it uses C# with OpenXML SDK for creation and Python with lxml for editing.
 
-This separation reflects different needs. Creation benefits from type-safe SDK usage with automatic package structure management. Editing requires direct XML manipulation for surgical precision.
+This separation comes from different needs. Creation benefits from type-safe SDK usage with automatic package structure management. Editing requires direct XML manipulation for surgical precision.
 
 ---
 

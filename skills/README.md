@@ -6,7 +6,48 @@ This directory contains those manuals. Each one is a comprehensive technical spe
 
 ---
 
-## What skills actually are
+## Table of Contents
+
+- [File Structure](#file-structure)
+- [What Skills Actually Are](#what-skills-actually-are)
+- [How Skill Loading Works](#how-skill-loading-works)
+- [Dynamic Context Loading](#dynamic-context-loading)
+- [The Four Skills](#the-four-skills)
+- [Knowledge versus Identity](#knowledge-versus-identity)
+- [The Slides Exception](#the-slides-exception)
+- [Comparison: Specialized Tools versus Skill-Gated Shell](#comparison-specialized-tools-versus-skill-gated-shell)
+- [Reading Guide](#reading-guide)
+- [Related Documentation](#related-documentation)
+
+---
+
+## File Structure
+
+```
+skills/
+├── README.md           # This file
+├── docx/               # Word document generation
+│   ├── SKILL.md
+│   └── analysis.md
+├── xlsx/               # Excel spreadsheet generation
+│   ├── SKILL.md
+│   ├── analysis.md
+│   └── pivot-table.md
+├── pdf/                # PDF document generation
+│   ├── SKILL.md
+│   ├── analysis.md
+│   └── routes/
+│       ├── html.md
+│       ├── latex.md
+│       └── process.md
+└── webapp/             # React web applications
+    ├── SKILL.md
+    └── analysis.md
+```
+
+---
+
+## What Skills Actually Are
 
 Traditional AI systems use many specific tools. A `create_docx()` function. A `validate_excel()` endpoint. A `compile_latex()` service. Kimi doesn't work this way.
 
@@ -18,17 +59,17 @@ The tool doesn't change. The knowledge changes.
 
 ---
 
-## How skill loading works
+## How Skill Loading Works
 
 When you ask for a spreadsheet, the system detects this intent and inserts an instruction: read the xlsx skill file before doing anything else. The agent executes `read_file("/app/.kimi/skills/xlsx/SKILL.md")`, loads 925 lines of Excel-specific guidance into its context, and proceeds with the task.
 
 This is just-in-time loading. The agent doesn't carry all skills at once. It loads what it needs when it needs it.
 
-The context window becomes a stack. At the top is the SKILL.md with domain expertise. Below that is the base OK Computer prompt providing identity. Below that is the conversation history and current user message. The expertise is temporary and task-specific.
+The context window works like a stack. At the top is the SKILL.md with domain expertise. Below that is the base OK Computer prompt with identity. Below that is the conversation history and current user message. The expertise is temporary and task-specific.
 
 ---
 
-## Dynamic context loading
+## Dynamic Context Loading
 
 Skills aren't static after loading. During execution, the agent loads and unloads additional context based on what it encounters.
 
@@ -38,7 +79,7 @@ This resembles how people work. You don't memorize every troubleshooting guide b
 
 ---
 
-## The four skills
+## The Four Skills
 
 **DOCX** handles Word document generation using C# with the OpenXML SDK rather than Python libraries like python-docx. The skill includes templates for different document types, validation rules for document structure, and instructions for running the .NET validator. It uses a dual-stack architecture: C# for creation, Python for editing.
 
@@ -50,7 +91,7 @@ This resembles how people work. You don't memorize every troubleshooting guide b
 
 ---
 
-## Knowledge versus identity
+## Knowledge versus Identity
 
 Kimi's architecture distinguishes between who the agent is and what the agent can do. These are handled by different parts of the system and change at different rates.
 
@@ -62,13 +103,13 @@ This separation has practical benefits. Users interact with a stable identity re
 
 ---
 
-## The Slides exception
+## The Slides Exception
 
 Kimi Slides doesn't follow the skill pattern. Instead of skill injection, it uses persona replacement: "You are a world-class presentation designer with 20 years of experience at McKinsey."
 
 Why? Within Kimi's system, spreadsheets have objective correctness criteria. Formulas work or they don't, and the rules can be written down. Presentation design requires subjective judgment about what makes a slide compelling. Some capabilities resist procedural specification.
 
-See the full analysis in `analysis/skills-vs-personas.md`.
+See the full analysis in [`analysis/skills-vs-personas.md`](../analysis/skills-vs-personas.md).
 
 ---
 
@@ -86,10 +127,19 @@ Both approaches separate identity from capabilities. The difference is where the
 
 ---
 
-## Reading guide
+## Reading Guide
 
 New to skills? Start with `docx/SKILL.md`. It's a comprehensive example of what a production skill definition looks like. Then look at `xlsx/SKILL.md` to see how validation rules are documented. Then `pdf/SKILL.md` to understand route selection.
 
-Want to understand the architecture? Read `analysis/how-kimi-works.md` for the full picture, then `analysis/skills-vs-personas.md` to understand why Slides is different.
+Want to understand the architecture? Read [`analysis/how-kimi-works.md`](../analysis/how-kimi-works.md) for the full picture, then [`analysis/skills-vs-personas.md`](../analysis/skills-vs-personas.md) to understand why Slides is different.
 
-Need definitions? Check `GLOSSARY.md` in the repository root.
+Need definitions? Check [`GLOSSARY.md`](../GLOSSARY.md) in the repository root.
+
+---
+
+## Related Documentation
+
+- [`../analysis/how-kimi-works.md`](../analysis/how-kimi-works.md) - Architectural overview
+- [`../analysis/skills-vs-personas.md`](../analysis/skills-vs-personas.md) - Why Slides is different
+- [`../prompts/README.md`](../prompts/README.md) - Agent types and prompt structure
+- [`../GLOSSARY.md`](../GLOSSARY.md) - Terminology definitions

@@ -8,7 +8,7 @@ Definitions for terms used throughout this repository.
 Traditional AI system design where models are given discrete function APIs to call. Stateless, request-response pattern with limited context for complex multi-step tasks.
 
 ### Environment Architecture
-Kimi K2.5's approach: providing models with general-purpose computing contexts including filesystems, browsers, and process execution. Enables persistent state across turns and complex workflows.
+Kimi K2.5's approach: giving models general-purpose computing contexts including filesystems, browsers, and process execution. Enables persistent state across turns and complex workflows.
 
 ### Base Prompt
 The foundational system prompt that defines an agent's identity, capabilities, constraints, and behavioral patterns. All other instructions build on or replace this base.
@@ -68,7 +68,7 @@ Browser profile directory containing 272 files across 15 subdirectories. Enables
 Python service (`browser_guard.py`) managing Chrome automation. Provides screenshot capabilities, element interaction, and security isolation for web browsing.
 
 ### Jupyter Kernel
-Python execution environment (`jupyter_kernel.py`) providing sandboxed code execution with matplotlib support, 30-minute timeout, and 500MB memory limit.
+Python execution environment (`jupyter_kernel.py`) with sandboxed code execution with matplotlib support, 30-minute timeout, and 500MB memory limit.
 
 ### Kernel Server
 Control plane service (`kernel_server.py`) on port 8888. Manages browser guard lifecycle, health checks, and skill script coordination.

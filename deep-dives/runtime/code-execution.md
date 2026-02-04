@@ -309,7 +309,7 @@ class ExecutionResult:
     timed_out: bool = False
 ```
 
-On timeout, the module sets `timed_out = True` and returns partial outputs collected so far. This allows the caller to see what happened before the timeout occurred.
+On timeout, the module sets `timed_out = True` and returns partial outputs collected so far. This lets the caller see what happened before the timeout occurred.
 
 ---
 
