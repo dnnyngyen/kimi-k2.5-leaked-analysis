@@ -151,12 +151,14 @@ Spreadsheets have right answers, so Kimi uses skill files. Presentations require
 
 ## Methodology
 
-I obtained this information by asking Kimi questions in plain English
-through its public interfaces. No code was written by the researcher.
-The agent autonomously inspected its own environment and provided the
-information in its responses. No prompt injection, jailbreaking, or
-adversarial techniques were used. See [METHODOLOGY.md](METHODOLOGY.md)
-for complete details.
+This repository contains materials extracted from the Kimi K2.5 agent
+environment through its standard public interfaces (kimi.com/agent,
+kimi.com/chat, and specialized endpoints). The agent executed shell
+commands and file reads in response to conversational queries to
+retrieve prompts, source code, and configuration files. No code was
+written by the researcher. No authentication was bypassed. No prompt
+injection, jailbreaking, or adversarial techniques were used. See
+[METHODOLOGY.md](METHODOLOGY.md) for complete details.
 
 **Independent verification:**
 - [kimi.com/chat](https://kimi.com/chat) — Base Chat with 10 tool calls

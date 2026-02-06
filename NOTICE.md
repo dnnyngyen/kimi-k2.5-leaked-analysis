@@ -21,9 +21,10 @@ See [LICENSE](LICENSE) for the complete legal text.
 
 ## Extraction Method
 
-All material was obtained by asking the Kimi agent conversational
-questions through its public interface. The agent autonomously inspected
-its own environment and provided the information in its responses. No
+All material was extracted through the standard Kimi public interface
+(kimi.com/agent). The agent executed shell commands and file reads
+within its container environment in response to conversational queries
+to retrieve system prompts, source code, and configuration files. No
 prompt injection, authentication bypass, or adversarial techniques
 were used. See [METHODOLOGY.md](METHODOLOGY.md) for details.
 

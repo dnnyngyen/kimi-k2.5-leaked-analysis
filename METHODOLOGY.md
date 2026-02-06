@@ -1,8 +1,11 @@
 # Methodology
 
-This analysis was conducted through plain-English conversation with Kimi's
-publicly accessible agent interfaces. No code was written by the researcher.
-No authentication was bypassed. No adversarial or injection prompts were used.
+This analysis documents materials extracted from the Kimi K2.5 agent
+environment through its standard public interfaces. The agent executed
+shell commands and file reads in response to conversational queries to
+retrieve system prompts, source code, tool schemas, and configuration
+files. No code was written by the researcher. No authentication was
+bypassed. No adversarial or injection prompts were used.
 
 ---
 
@@ -15,21 +18,26 @@ itself was performed entirely through conversation with Kimi.
 
 ## How the Extraction Worked
 
-I asked Kimi questions in natural language, across multiple conversational
-sessions, using the standard chat interface at kimi.com/agent (OK Computer).
+## How the Extraction Worked
 
-I asked things like "what files are in your environment?" and "can you show me
-the contents of your Python source code?" The agent decided, autonomously, to
-run shell commands and Python code to answer my questions. It then returned
-the results in its responses.
+Materials were extracted through multiple conversational sessions using
+the standard chat interface at kimi.com/agent (OK Computer). Example
+queries included:
 
-I did not write `os.listdir()` or `open()` calls. The agent chose those
-methods itself to fulfill my plain-English requests. Every piece of information
-in this repository was provided by the agent through its standard conversational
-interface, then exported through the agent's own file-output capabilities.
+- "What files are in your environment?"
+- "Show me the contents of /app/kernel_server.py"
+- "What tools do you have access to?"
 
-This is a meaningful distinction. I did not execute technical extraction
-commands. I asked an AI assistant questions about itself, and it answered them.
+In response to these queries, the agent executed shell commands
+(`ls`, `cat`, `find`) and Python code (`open()`, `os.listdir()`)
+within its container environment. The agent returned file contents
+and directory listings through its chat interface. Files were then
+exported using the agent's built-in file output capabilities.
+
+The researcher did not write or execute any code directly. All commands
+were chosen and executed by the agent in response to plain-English
+requests. This is a standard capability of the OK Computer interface,
+which provides shell and Python access as documented features.
 
 ---
 
