@@ -51,7 +51,7 @@ stateDiagram
     }
     
     state RecoveringTab {
-        [*] --> CreateTab: CDP: Target.createTarget()
+        [*] --> CreateTab: CDP Target.createTarget()
         CreateTab --> VerifyTab: Check tab list
     }
     
