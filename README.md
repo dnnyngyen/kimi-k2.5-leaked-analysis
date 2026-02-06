@@ -164,13 +164,4 @@ is licensed under CC BY 4.0. Third-party components (PDF.js) retain their
 upstream licenses. See [`LICENSE`](LICENSE) and [`NOTICE.md`](NOTICE.md)
 for details.
 
----
-
-## Star History
-
-[![GitHub stars](https://img.shields.io/github/stars/dnnyngyen/kimi-agent-internals?style=social)](https://github.com/dnnyngyen/kimi-agent-internals/stargazers)
-
-<a href="https://www.star-history.com/#dnnyngyen/kimi-agent-internals&type=date&legend=top-left">
-  <img src="https://api.star-history.com/svg?repos=dnnyngyen/kimi-k2.5-system-analysis&type=date&legend=top-left" width="50%">
-</a>
 
