@@ -1,5 +1,7 @@
 # Kimi K2.5 System Analysis
 
+![Kimi K2.5 System Analysis Banner](banner.png)
+
 [![License: Mixed](https://img.shields.io/badge/License-CC0%20%2B%20CC%20BY%204.0-blue)](LICENSE)
 [![Type: Research](https://img.shields.io/badge/Type-Research-0366d6)](https://github.com/dnnyngyen/kimi-agent-internals)
 [![Method: Conversational Extraction](https://img.shields.io/badge/Method-Conversational%20Extraction-blue)](METHODOLOGY.md)
