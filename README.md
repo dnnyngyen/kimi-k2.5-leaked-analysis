@@ -1,12 +1,10 @@
 # Kimi K2.5 System Analysis
 
-[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![Type: Research](https://img.shields.io/badge/Type-Research-blue)](https://github.com/dnnyngyen/kimi-k2.5-system-internals)
-[![Status](https://img.shields.io/badge/Status-Complete-success)](https://github.com/dnnyngyen/kimi-k2.5-system-internals)
-[![Method](https://img.shields.io/badge/Method-Open%20Analysis-purple)](https://github.com/dnnyngyen/kimi-k2.5-system-internals)
-[![GitHub Repo Size](https://img.shields.io/github/repo-size/dnnyngyen/kimi-k2.5-system-internals)](https://github.com/dnnyngyen/kimi-k2.5-system-internals)
-[![GitHub Last Commit](https://img.shields.io/github/last-commit/dnnyngyen/kimi-k2.5-system-internals)](https://github.com/dnnyngyen/kimi-k2.5-system-internals/commits/main)
-[![GitHub Commit Activity](https://img.shields.io/github/commit-activity/m/dnnyngyen/kimi-k2.5-system-internals)](https://github.com/dnnyngyen/kimi-k2.5-system-internals/commits/main)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-9cf.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![Type: Research](https://img.shields.io/badge/Type-Research-0366d6)](https://github.com/dnnyngyen/kimi-k2.5-system-internals)
+[![Method](https://img.shields.io/badge/Method-Open%20Analysis-0969da)](https://github.com/dnnyngyen/kimi-k2.5-system-internals)
+[![GitHub Repo Size](https://img.shields.io/github/repo-size/dnnyngyen/kimi-k2.5-system-internals?color=58a6ff)](https://github.com/dnnyngyen/kimi-k2.5-system-internals)
+[![GitHub Last Commit](https://img.shields.io/github/last-commit/dnnyngyen/kimi-k2.5-system-internals?color=79c0ff)](https://github.com/dnnyngyen/kimi-k2.5-system-internals/commits/main)
 
 > An analysis of Moonshot AI's Kimi K2.5 agent architecture.
 >
