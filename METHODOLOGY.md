@@ -3,8 +3,9 @@
 
 # Methodology
 
-This analysis documents materials extracted from the Kimi K2.5 agent
-environment through its standard public interfaces. The agent executed
+This analysis documents materials extracted from the Kimi agent
+environment (kimi.com interfaces) through its standard public interfaces.
+The Kimi K2.5 model powers these agents. The agent executed
 shell commands and file reads in response to conversational queries to
 retrieve system prompts, source code, tool schemas, and configuration
 files. No code was written by the researcher. No authentication was

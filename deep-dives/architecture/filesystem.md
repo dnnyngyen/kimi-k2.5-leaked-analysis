@@ -47,19 +47,19 @@
 
 ## KIMI agents:
 
-# 1. KIMI OK Computer Agent (kimi.com/agent):
+# 1. OK Computer Agent (kimi.com/agent):
 Standard single-agent tool use with OK Computer environment. This environment/system prompt is used as the base layer for all other KIMI agents with the exception of KIMI slides, which uses the same environment with a specialized prompt.
 
-# 2. KIMI Websites (kimi.com/websites):
+# 2. Websites Agent (kimi.com/websites):
 Standard single-agent tool use with OK Computer environment and KIMI agent prompt with skill reading instructions appended to the end directing it to the webapp skill.
 
-# 3. KIMI Docs (kimi.com/docs):
+# 3. Docs Agent (kimi.com/docs):
 Standard single-agent tool use with OK Computer environment and KIMI agent prompt with a document mode activation appended to the end. If a user initiates a KIMI Agent with an uploded doc, it also appends these instructions.
 
-# 4. KIMI Sheets (kimi.com/sheets):
+# 4. Sheets Agent (kimi.com/sheets):
 Standard single-agent tool use with OK Computer environment and KIMI agent prompt with Instructions to read xlsx SKILL.md first
 
-# 5. KIMI Slides (kimi.com/slides):
+# 5. Slides Agent (kimi.com/slides):
 Standard single-agent tool use with OK Computer environment and a specialized prompt different from the other agents.
 
 ## OK Computer Environment Overview
@@ -120,13 +120,13 @@ Parallel multi-agent execution for complex research/coding.
 
 ## Discussion
 
-The Kimi K2.5 AI system operates as a containerized platform built on Debian GNU/Linux 12 (bookworm), comprising approximately 56,172 files across the full operating system distribution. At its core, the platform provides two primary interface paradigms: Base KIMI Chat and OK Computer Agents. Both environments share identical underlying infrastructure while differing significantly in their capability frameworks. This document presents a unified technical reference describing the complete system architecture, filesystem structure, comparative capabilities, and operational characteristics.
+The Kimi agent system (K2.5 model) operates as a containerized platform built on Debian GNU/Linux 12 (bookworm), comprising approximately 56,172 files across the full operating system distribution. At its core, the platform provides two primary interface paradigms: Base KIMI Chat and OK Computer Agents. Both environments share identical underlying infrastructure while differing significantly in their capability frameworks. This document presents a unified technical reference describing the complete system architecture, filesystem structure, comparative capabilities, and operational characteristics.
 
 The system functions as a four-layer containerized architecture isolated at the network level, with a FastAPI control plane managing an IPython compute engine, Playwright-based web automation tools, and structured user workspaces. The total application footprint within the `/app/` directory contains approximately 26,211 files, with the skills framework contributing roughly 745 files excluding dependencies.
 
 ## System Architecture
 
-The Kimi K2.5 platform employs a consistent containerized architecture across all operational modes. The container runs isolated from external network connectivity while maintaining internal service communication through localhost interfaces.
+The Kimi agent platform employs a consistent containerized architecture across all operational modes. The container runs isolated from external network connectivity while maintaining internal service communication through localhost interfaces.
 
 ### 1.1 High-Level Component Diagram
 
@@ -197,9 +197,9 @@ Layer Four comprises the user workspace at `/mnt/kimi/` with subdirectories for 
 
 ## Operating Modes
 
-Kimi K2.5 operates across multiple interface paradigms with varying capability sets. The Base KIMI Chat environment at kimi.com/chat provides a direct conversational interface with a 10-step tool budget per turn, offering K2.5 Instant for fast non-thinking responses and K2.5 Thinking for step-by-step reasoning with visible reasoning tokens. The OK Computer Agent environment at kimi.com/agent extends this foundation with a skill-guided agent framework for document generation, React web application building, and structured workflow execution through SKILL.md specifications.
+Kimi operates across multiple interface paradigms with varying capability sets. The Base Chat environment at kimi.com/chat provides a direct conversational interface with a 10-step tool budget per turn, offering K2.5 Instant for fast non-thinking responses and K2.5 Thinking for step-by-step reasoning with visible reasoning tokens. The OK Computer agent environment at kimi.com/agent extends this foundation with a skill-guided agent framework for document generation, React web application building, and structured workflow execution through SKILL.md specifications.
 
-Specialized agent variants include KIMI Docs at kimi.com/docs for document processing with document mode activation, KIMI Sheets at kimi.com/sheets for spreadsheet operations with xlsx skill instructions, KIMI Websites at kimi.com/websites for web application development with webapp skill direction, and KIMI Slides at kimi.com/slides using a specialized prompt distinct from other agents. The K2.5 Agent Swarm in beta provides parallel multi-agent execution for complex research and coding tasks.
+Specialized agent variants include Docs Agent at kimi.com/docs for document processing with document mode activation, Sheets Agent at kimi.com/sheets for spreadsheet operations with xlsx skill instructions, Websites Agent at kimi.com/websites for web application development with webapp skill direction, and Slides Agent at kimi.com/slides using a specialized prompt distinct from other agents. The Agent Swarm in beta provides parallel multi-agent execution for complex research and coding tasks.
 
 Base KIMI Chat and OK Computer share identical infrastructure components. Both environments contain the same `kernel_server.py` control plane, `jupyter_kernel.py` compute engine, `browser_guard.py` web automation, Chrome runtime data comprising approximately 272 files in `/app/data/chrome_data/`, the PDF viewer extension with 387 files, the 57.4 megabyte tectonic LaTeX engine, and the `/mnt/kimi` workspace structure. The key differentiator lies in the skills framework present only in OK Computer.
 

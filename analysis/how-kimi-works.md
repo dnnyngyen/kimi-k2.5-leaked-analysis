@@ -2,7 +2,7 @@
 
 # How Kimi Works
 
-Kimi K2.5 isn't one agent. It's multiple operating modes that share infrastructure but behave differently depending on what you're trying to do.
+Kimi isn't one agent. It's multiple operating modes that share infrastructure but behave differently depending on what you're trying to do. All use the Kimi K2.5 model.
 
 I mapped these modes by reading the system prompts, tracing the container filesystem, and watching how the same model behaves under different configurations. The tools and filesystem access stay the same across modes. What changes is the knowledge loaded into the context.
 
@@ -14,8 +14,8 @@ Kimi operates in several distinct modes. Four are for basic chat. Four are for a
 
 **Base chat modes** (kimi.com/chat):
 
-- Kimi K2.5 Instant. Fast responses, no thinking tokens. This is the default.
-- Kimi K2.5 Thinking. Step-by-step reasoning with visible reasoning tokens.
+- K2.5 Instant. Fast responses, no thinking tokens. This is the default.
+- K2.5 Thinking. Step-by-step reasoning with visible reasoning tokens.
 - Kimi K2. Fast, non-thinking mode (deprecated).
 - Kimi K2 Thinking. Step-by-step reasoning (deprecated).
 
@@ -46,7 +46,7 @@ After reading this file, the same shell tool focuses on Excel-specific work. The
 
 ## Base Chat versus OK Computer
 
-The same Kimi model powers two different experiences. Base Chat at kimi.com/chat is conversational. It gets 10 tool calls per turn, no skill loading, and no persistent filesystem. It's a question-answering system.
+The same K2.5 model powers two different experiences. Base Chat at kimi.com/chat is conversational. It gets 10 tool calls per turn, no skill loading, and no persistent filesystem. It's a question-answering system.
 
 OK Computer at kimi.com/agent is agentic. It gets effectively unlimited tool calls per session, runtime skill injection, and a persistent workspace. It produces deliverables.
 

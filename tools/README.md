@@ -2,7 +2,7 @@
 
 # Tools
 
-Tool schemas and documentation for the Kimi K2.5 agent system.
+Tool schemas and documentation for the Kimi agent system (K2.5 model).
 
 ---
 

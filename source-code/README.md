@@ -6,7 +6,7 @@
 > the extent of any rights the maintainer may hold. Moonshot AI may hold
 > copyright or other rights in this material. See [../LICENSE](../LICENSE).
 
-Extracted Python runtime code for the Kimi K2.5 agent environment.
+Extracted Python runtime code for the Kimi agent environment (K2.5 model).
 
 ---
 

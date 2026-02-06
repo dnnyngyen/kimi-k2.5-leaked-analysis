@@ -3,7 +3,7 @@
 
 # System Prompts
 
-This directory contains the system prompts for all 6 Kimi K2.5 agent types.
+This directory contains the system prompts for all 6 Kimi agent types (K2.5 model).
 
 ---
 

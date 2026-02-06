@@ -2,7 +2,7 @@
 
 # Analysis
 
-Research findings and insights from analyzing the Kimi K2.5 agent system.
+Research findings and insights from analyzing the Kimi agent system (K2.5 model).
 
 ---
 

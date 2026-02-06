@@ -11,7 +11,7 @@ Definitions for terms used throughout this repository.
 Traditional AI system design where models are given discrete function APIs to call. Stateless, request-response pattern with limited context for complex multi-step tasks.
 
 ### Environment Architecture
-Kimi K2.5's approach: giving models general-purpose computing contexts including filesystems, browsers, and process execution. Enables persistent state across turns and complex workflows.
+The Kimi agent approach (using the K2.5 model): giving the model general-purpose computing contexts including filesystems, browsers, and process execution. Enables persistent state across turns and complex workflows.
 
 ### Base Prompt
 The foundational system prompt that defines an agent's identity, capabilities, constraints, and behavioral patterns. All other instructions build on or replace this base.

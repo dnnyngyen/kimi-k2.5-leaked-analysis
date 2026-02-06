@@ -1,9 +1,9 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright 2026 Danny Nguyen -->
 
-# Kimi K2.5 System Analysis
+# Kimi Agent System Analysis
 
-![Kimi K2.5 System Analysis Banner](banner.png)
+![Kimi Agent System Analysis Banner](banner.png)
 
 [![License: Mixed](https://img.shields.io/badge/License-CC0%20%2B%20CC%20BY%204.0-blue)](LICENSE)
 [![Type: Research](https://img.shields.io/badge/Type-Research-0366d6)](https://github.com/dnnyngyen/kimi-agent-internals)
@@ -11,7 +11,7 @@
 [![Repo Size](https://img.shields.io/github/repo-size/dnnyngyen/kimi-agent-internals?label=size&color=58a6ff)](https://github.com/dnnyngyen/kimi-agent-internals)
 [![Last Commit](https://img.shields.io/github/last-commit/dnnyngyen/kimi-agent-internals?color=79c0ff)](https://github.com/dnnyngyen/kimi-agent-internals/commits/main)
 
-> An analysis of Moonshot AI's Kimi K2.5 agent architecture.
+> An analysis of Moonshot AI's Kimi agent architecture (K2.5 model).
 >
 > **AI Disclosure:** This analysis was conducted using [Claude Code](https://claude.ai/code).
 
@@ -30,7 +30,7 @@
 
 ## Overview
 
-This is an analysis of Moonshot AI's Kimi K2.5 agent architecture and source code. No authentication was bypassed. No binaries were decompiled. Everything here was provided by the agent itself in response to plain-English questions through standard interfaces.
+This is an analysis of Moonshot AI's Kimi agent architecture and source code. Kimi K2.5 is the underlying model; the agents at kimi.com/chat, kimi.com/agent, and specialized endpoints are different interfaces that use this model. No authentication was bypassed. No binaries were decompiled. Everything here was provided by the agent itself in response to plain-English questions through standard interfaces.
 
 Kimi shifted from tool-use architectures to skill-based environment architectures. Instead of giving the model discrete APIs, it gives the model general-purpose computing contexts: persistent filesystems, browser automation, and process execution. The model acts as an operating system user rather than an API consumer.
 
@@ -137,7 +137,7 @@ System prompts for six agent types: Base Chat, OK Computer, Docs, Sheets, Slides
 
 ## Methodology
 
-This repository contains materials extracted from the Kimi K2.5 agent
+This repository contains materials extracted from the Kimi agent
 environment through its standard public interfaces (kimi.com/agent,
 kimi.com/chat, and specialized endpoints). The agent executed shell
 commands and file reads in response to conversational queries to

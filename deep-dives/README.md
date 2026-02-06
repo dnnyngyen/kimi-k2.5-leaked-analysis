@@ -2,7 +2,7 @@
 
 # Deep Dives
 
-Technical reference documentation for the Kimi K2.5 runtime environment.
+Technical reference documentation for the Kimi agent runtime environment (K2.5 model).
 
 These documents contain detailed implementation analysis extracted from the container filesystem and source code.
 
